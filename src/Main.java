@@ -25,6 +25,12 @@ public class Main{
                 case 2:
                     new FactorialRecursive().run();
                     break;
+                case 3:
+                    new BinarySearch().run();
+                    break;
+                case 4:
+                    new GCD().run();
+                    break;
                 case 0:
                     System.out.println("Exiting...");
                     scanner.close();
