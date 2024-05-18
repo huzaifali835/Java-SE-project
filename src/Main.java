@@ -5,6 +5,7 @@ public class Main{
         while(true){
             System.out.println("/nChoose an opearation");
             System.out.println("1. Bubble Sort");
+            System.out.println("2. Factorial");
             System.out.println("0. Exit");
 
             int userInput = scanner.nextInt();
@@ -12,6 +13,9 @@ public class Main{
             switch(userInput){
                 case 1:
                     new BubbleSort().run();
+                    break;
+                case 2:
+                    new FactorialRecursive().run();
                     break;
                 case 0:
                     System.out.println("Exiting...");
