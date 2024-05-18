@@ -37,6 +37,12 @@ public class Main{
                 case 6:
                     new AnagramChecker().run();
                     break;
+                case 7:
+                    new ArmstrongNumber().run();
+                    break;
+                case 8:
+                    new ReverseString().run();
+                    break;
                 case 0:
                     System.out.println("Exiting...");
                     scanner.close();
