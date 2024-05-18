@@ -1,5 +1,26 @@
+import java.util.Scanner;
 public class Main{
     public static void main(String[] arg){
-        System.out.println("Hello World");
+        Scanner scanner = new Scanner(System.in);
+        while(true){
+            System.out.println("/nChoose an opearation");
+            System.out.println("1. Bubble Sort");
+            System.out.println("0. Exit");
+
+            int userInput = scanner.nextInt();
+            scanner.nextLine();
+            switch(userInput){
+                case 1:
+                    new BubbleSort().run();
+                    break;
+                case 0:
+                    System.out.println("Exiting...");
+                    scanner.close();
+                    return;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+        }
+
     }
 }
