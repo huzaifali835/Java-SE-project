@@ -31,12 +31,6 @@ public class Main{
                 case 4:
                     new GCD().run();
                     break;
-                case 5:
-                    new LCM().run();
-                    break;
-                case 6:
-                    new AnagramChecker().run();
-                    break;
                 case 0:
                     System.out.println("Exiting...");
                     scanner.close();
