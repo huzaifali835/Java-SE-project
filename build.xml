@@ -1,12 +1,23 @@
-<project name="Java-SE-Project" default="run">
-    <target name="compile">
-        <mkdir dir="build"/>
-        <javac srcdir="src" destdir="build"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Java-SE-Project" default="run" basedir=".">
+    <property name="src.dir" value="src"/>
+    <property name="build.dir" value="build"/>
+    <target name="init">
+        <mkdir dir="${build.dir}"/>
+    </target>
+    <target name="compile" depends="init">
+        <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false">
+            <include name="**/*.java"/>
+        </javac>
     </target>
     <target name="run" depends="compile">
-        <java classname="Main" classpath="build"/>
+        <java classname="Main" fork="true" dir="${build.dir}">
+            <classpath>
+                <pathelement path="${build.dir}"/>
+            </classpath>
+        </java>
     </target>
     <target name="clean">
-        <delete dir="build"/>
+        <delete dir="${build.dir}"/>
     </target>
 </project>
